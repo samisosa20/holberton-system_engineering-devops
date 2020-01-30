@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo chgrp holberton _hello | sudo chown betty _hello
