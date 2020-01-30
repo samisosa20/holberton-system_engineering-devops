@@ -1,2 +1,2 @@
-#!/bin/bash 
-chmod -R +X ./
+B#!/bin/bash 
+find * -type d | chmod 711 *
