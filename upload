@@ -1,0 +1,5 @@
+#!/bin/bash/
+git commit -m
+echo upload starting, please witre what commit do you want?
+read -p 'Commit: ' com
+
