@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script that loops from 1 to 10 
 COUNT=1
 while [ $COUNT -lt 11 ]
 do
