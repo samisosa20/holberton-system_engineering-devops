@@ -3,9 +3,9 @@ COUNT=0
 while [ $COUNT -lt 10 ]
 do
 	echo "Holberton School"
-	if [ $COUNT -eq 8 ]
+	if [ $COUNT = 8 ]
 	then
 		echo "Hi"
 	fi
-	let COUNT=COUNT+1
+	COUNT=$((COUNT+1))
 done
