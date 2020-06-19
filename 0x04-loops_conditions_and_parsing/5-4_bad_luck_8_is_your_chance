@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-x=1
-while [ $x -le 10 ]
+X=1
+while [ $X -lt 11 ]
 do
-    if [ $x == 4 ]
-    then
-        echo "bad luck"
-    elif [ $x == 8 ]
-    then
-        echo "good luck"
-    else
-        echo "Holberton School"
-    fi
-    x=$(( $x + 1 ))
+    if [ $X -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $X -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+    let X=$X+1
 done
