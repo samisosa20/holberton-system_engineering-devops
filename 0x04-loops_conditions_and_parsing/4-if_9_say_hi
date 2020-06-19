@@ -3,9 +3,9 @@ X=0
 while [ $X -lt 10 ]
 do
     echo "Holberton School"
-    if [ $X == 9 ]
+    if [ $X -eq 8 ]
     then
         echo "Hi"
     fi
-    X=$X+1
+    let X=$X+1
 done
