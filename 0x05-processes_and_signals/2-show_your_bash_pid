@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# displays processes that contain the pattern 'bash'
+# shellcheck disable=SC2009
+ps -efu | grep bash
+

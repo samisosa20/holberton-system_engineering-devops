@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# kills a process (4-to_infinity_and_beyond)
+
+OUTPUT=$(pgrep -f ./4-to_infinity_and_beyond)
+for LINE in $OUTPUT; do
+    kill "$LINE"
+done
+

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# displays PID and name of process(es) that contain the pattern 'bash'
+
+pgrep -l bash
+
