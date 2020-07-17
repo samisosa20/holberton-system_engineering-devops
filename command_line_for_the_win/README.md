@@ -15,7 +15,7 @@ This project is NOT mandatory at all. It is 100% optional. Doing any part of thi
 
 ### [0-first_9_tasks.jpg](./0-first_9_tasks.jpg)
 * Complete the first 9 tasks.
-![0-first_9_tasks.jpg](./0-first_9_tasks.jpg)
+![0-first_9_tasks.jpg](https://github.com/samisosa20/holberton-system_engineering-devops/blob/master/command_line_for_the_win/0-first_9_tasks.jpg)
 
 ### [1-next-9-tasks.jpg](./1-next-9-tasks.jpg)
 * Complete the 9 next tasks, getting to 18 total.
