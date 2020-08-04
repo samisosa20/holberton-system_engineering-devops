@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Create a conection ssh
-ssh -i ~/.ssh/id_rsa ubuntu@34.74.209.93
+ssh ubuntu@34.74.209.93 -i ~/.ssh/web-server01
