@@ -1,3 +1,5 @@
+# Install Nginx and config Nginx
+
 exec { 'add-apt-repository':
 	command => "/usr/bin/add-apt-repository ppa:nginx/stable"
 }
