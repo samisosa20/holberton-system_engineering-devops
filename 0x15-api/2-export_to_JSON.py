@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import json
-import requests
-from sys import argv
 """
 accessing a url with employee ID to return information
 """
+import json
+import requests
+from sys import argv
 
 
 if __name__ == "__main__":
