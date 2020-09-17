@@ -19,6 +19,10 @@ def recurse(subreddit, hot_list=[]):
         if not list_data:
             return(None)
         else:
-            return(recurse(subreddit, list_data))
+            list_title = []
+            for topten in list_data:
+                list_title.append(topten.get("data").get("title"))
+            return(recurse(subreddit, list_title))
     else:
+
         return(hot_list)
