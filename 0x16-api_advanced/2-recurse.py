@@ -10,12 +10,15 @@ import requests
 
 
 def recurse(subreddit, hot_list=[]):
-    header = {'User-Agent': 'APP-NAME by REDDIT-USERNAME'}
-    top = requests.get("https://www.reddit.com/r/{}/hot.json".
-                       format(subreddit), headers=header,
-                       allow_redirects=False).json()
-    list_data = top.get("data", {}).get("children", [])
-    if not list_data:
-        print(None)
+    if not hot_list:
+        header = {'User-Agent': 'APP-NAME by REDDIT-USERNAME'}
+        top = requests.get("https://www.reddit.com/r/{}/hot.json".
+                           format(subreddit), headers=header,
+                           allow_redirects=False).json()
+        list_data = top.get("data", {}).get("children", [])
+        if not list_data:
+            return(None)
+        else:
+            return(recurse(subreddit, list_data))
     else:
-        return(list_data)
+        return(hot_list)
