@@ -9,20 +9,20 @@ given subreddit, the function should return None
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
-    if not hot_list:
-        header = {'User-Agent': 'APP-NAME by REDDIT-USERNAME'}
-        top = requests.get("https://www.reddit.com/r/{}/hot.json".
-                           format(subreddit), headers=header,
-                           allow_redirects=False).json()
-        list_data = top.get("data", {}).get("children", [])
-        if not list_data:
+def recurse(subreddit, hot_list=[], after=''):
+    header = {'User-Agent': 'APP-NAME by REDDIT-USERNAME'}
+    top = requests.get("https://www.reddit.com/r/{}/hot.json?after={}".
+                       format(subreddit, after), headers=header,
+                       allow_redirects=False).json()
+    after = top.get("data", {}).get("after", [])
+    list_data = top.get("data", {}).get("children", [])
+    if not list_data:
+        return(None)
+    else:
+        list_title = []
+        for topten in list_data:
+            list_title.append(topten.get("data").get("title"))
+        if list_title is None:
             return(None)
         else:
-            list_title = []
-            for topten in list_data:
-                list_title.append(topten.get("data").get("title"))
-            return(recurse(subreddit, list_title))
-    else:
-
-        return(hot_list)
+            return(recurse(subreddit, list_title, after))
