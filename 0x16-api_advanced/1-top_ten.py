@@ -10,7 +10,8 @@ import requests
 def top_ten(subreddit):
     header = {'User-Agent': 'APP-NAME by REDDIT-USERNAME'}
     top = requests.get("https://www.reddit.com/r/{}/hot.json".
-                       format(subreddit), headers=header).json()
+                       format(subreddit), headers=header,
+                       allow_redirects=False).json()
     list_data = top.get("data", {}).get("children", [])
     if not list_data:
         print(None)
