@@ -6,12 +6,6 @@ posts listed for a given subreddit.
 """
 import requests
 
-# tasks = {}
-#    for post in list_data:
-#        tasks.update({post.get("data").
-#                      get("title"): post.get("data").get("ups")})
-#    sort_orders = sorted(tasks.items(), key=lambda x: x[1], reverse=True)
-
 
 def top_ten(subreddit):
     header = {'User-Agent': 'APP-NAME by REDDIT-USERNAME'}
