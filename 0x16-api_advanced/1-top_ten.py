@@ -12,6 +12,8 @@ def top_ten(subreddit):
     top = requests.get("https://www.reddit.com/r/{}/hot.json".
                        format(subreddit), headers=header).json()
     list_data = top.get("data", {}).get("children", [])
+    if not list_data:
+        print(None)
     tasks = {}
     for post in list_data:
         tasks.update({post.get("data").
